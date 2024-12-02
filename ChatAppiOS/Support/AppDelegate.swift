@@ -6,15 +6,27 @@
 //
 
 import UIKit
+import FirebaseCore
+import Firebase
+import GoogleSignIn
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    let api = "AIzaSyAeNk1LBf-W8e6bJYh8WO9gD7M4dZGSqGY"
+    let locationManager = CLLocationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        locationManager.requestWhenInUseAuthorization()
+        FirebaseApp.configure()
+        GMSServices.provideAPIKey(api)
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance.handle(url)
     }
 
     // MARK: UISceneSession Lifecycle

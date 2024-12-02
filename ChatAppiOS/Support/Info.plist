@@ -2,6 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSWidgetWantsLocation</key>
+	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Ubicacion</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Ubicacion</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Ubicacion</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Acceso para microfono</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Acceso para fotos </string>
+	<key>NSCameraUsageDescription</key>
+	<string>Acceso para camara</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
